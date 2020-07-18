@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title></title>
+    <script src="./vehiculo.js"></script> 
+    <script src="./eTipo.js"></script>
+    <script src="./auto.js"></script>   
+    <script src="./camioneta.js"></script>   
+    <script src="./funciones.js"></script> 
+    <link rel="stylesheet" href="./estilo.css"></link>
+</head>
+<body>
+    <input type="button" value="ALTA" id="verForm" class="alta"> 
+    <div id="formulario" class="contenedor" hidden>
+        <div id="titulo" class="tituloFormulario">
+            <label>Formulario de vehiculo</label><br>
+        </div>
+        <label for="tipoVehiculo">Seleccion un vehiculo:</label><br>
+        <select name="tipoDeVehiculo" id="tipoVehiculo">
+            <option value="1" selected>Auto</option>
+            <option value="2">Camioneta</option>
+        </select><br><br>
+        <label for="nameM">ID:</label><br>
+        <input type="text" id="ID"  name="nameMarca" disabled><br><br>
+        <label for="nameM">Marca:</label><br>
+        <input type="text" id="marca"  name="nameMarca"><br><br>
+        <label for="nameM">Modelo:</label><br>
+        <input type="text" id="modelo"  name="nameModelo"><br><br>
+        <label for="nameM">Precio:</label><br>
+        <input type="text" id="precio"  name="price"><br><br>
+
+
+
+
+        <div id="infoAuto">
+            <label for="raza">Cantidad de Puertas:</label><br>
+            <input type="number" id="cantPuertas"  name="puertas" value="3" min="3" max="5"><br><br>
+        </div>
+        <div id="infoCamioneta">
+            <label for="cantVidas">Cuatro x Cuatro:</label><br>
+            <select id="cuatroXcuatro" name="cuatroporcuatro" class="select">
+                <option value="1"selected>Si</option>
+                <option value="2">No</option>
+            </select><br><br>
+        </div>   
+        <input type="button" value="Guardar" id="btnGuardar" name="botonGuardar">   
+        <input type="button" value="Eliminar" id="btnEliminar" name="botonEliminar">  
+    </div>
+
+    
+    <h2>Lista de Vehiculo</h2>
+    <label>Promedio:</label>
+    <input type="number" id="mostrar"  disabled><br><br>
+
+    <label>Filtrar Tabla por Marca:</label>
+    <input type="text" id="filtrado"><br><br>
+    <input type="button" value="filtrar" id="filtrar"> 
+    
+    
+        <table border="1" id="tabla" width="75%">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                    <th>Puertas o cuatroporcuatro</th>
+                </tr>
+            </thead>
+            <tbody id="tCuerpo">
+                
+            </tbody>
+        </table>    
+</body>
+</html>
